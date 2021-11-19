@@ -1,8 +1,8 @@
 # A package containing DTO casters
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/morningtrain/data-transfer-object-casters.svg?style=flat-square)](https://packagist.org/packages/morningtrain/data-transfer-object-casters)
-![GitHub Tests Action Status](https://github.com/SimonJnsson/data-transfer-object-casters/workflows/Tests/badge.svg)
-[![Code style](https://img.shields.io/github/workflow/status/morningtrain/data-transfer-object-casters/Check%20&%20fix%20styling?label=code%20style)](https://github.com/SimonJnsson/data-transfer-object-casters/actions/workflows/php-cs-fixer.yml/badge.svg)
+![GitHub Tests Action Status](https://github.com/Morning-Train/data-transfer-object-casters/workflows/Tests/badge.svg)
+[![Code style](https://img.shields.io/github/workflow/status/Morning-Train/data-transfer-object-casters/Check%20&%20fix%20styling?label=code%20style)](https://github.com/SimonJnsson/data-transfer-object-casters/actions/workflows/php-cs-fixer.yml/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/morningtrain/data-transfer-object-casters.svg?style=flat-square)](https://packagist.org/packages/morningtrain/data-transfer-object-casters)
 
 ## Installation

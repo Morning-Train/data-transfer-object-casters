@@ -1,0 +1,5 @@
+<?php
+
+use Morningtrain\DataTransferObjectCasters\Tests\TestCase;
+
+uses(TestCase::class)->in(__DIR__);

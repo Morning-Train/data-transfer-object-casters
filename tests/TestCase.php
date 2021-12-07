@@ -28,9 +28,7 @@ class TestCase extends Orchestra
     {
         config()->set('database.default', 'testing');
 
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_data-transfer-object-casters_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_test_models_table.php.stub';
         $migration->up();
-        */
     }
 }

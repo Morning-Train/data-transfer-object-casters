@@ -6,7 +6,6 @@ use Spatie\DataTransferObject\Attributes\CastWith;
 use Spatie\DataTransferObject\DataTransferObject;
 
 it('casts to model from primary key', function () {
-
     $model = TestModel::factory()->create(['name' => 'Clark']);
 
     $DTO = new class (['model' => $model->getKey()]) extends DataTransferObject {
@@ -20,7 +19,6 @@ it('casts to model from primary key', function () {
 });
 
 it('casts to model from specified column', function () {
-
     $model = TestModel::factory()->create(['name' => 'Clark']);
 
     $DTO = new class (['model' => 'Clark']) extends DataTransferObject {
@@ -34,7 +32,6 @@ it('casts to model from specified column', function () {
 });
 
 it('casts to model value from specified column', function () {
-
     $model = TestModel::factory()->create(['name' => 'Clark']);
 
     $DTO = new class (['modelName' => $model->getKey()]) extends DataTransferObject {

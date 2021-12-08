@@ -1,6 +1,6 @@
 <?php
 
-namespace Morningtrain\DataTransferObjectCasters\Models;
+namespace Morningtrain\DataTransferObjectCasters\Tests;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

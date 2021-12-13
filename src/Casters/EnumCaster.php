@@ -17,7 +17,7 @@ class EnumCaster implements Caster
 
     public function cast(mixed $value): mixed
     {
-        if($value instanceof $this->enumClass) {
+        if ($value instanceof $this->enumClass) {
             return $value;
         }
 

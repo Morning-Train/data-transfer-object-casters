@@ -80,7 +80,7 @@ If the provided value is not a string, it will return the provided value.
 The EnumCaster will cast the provided value to an enum value. 
 
 ```php
-use Morningtrain\DataTransferObjectCasters\Casters\UppercaseFirstCaster;
+use Morningtrain\DataTransferObjectCasters\Casters\EnumCaster;
 
 class DTO extends DataTransferObject
 {

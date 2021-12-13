@@ -75,6 +75,20 @@ class DTO extends DataTransferObject
 
 If the provided value is not a string, it will return the provided value.
 
+### Enum
+
+The EnumCaster will cast the provided value to an enum value. 
+
+```php
+use Morningtrain\DataTransferObjectCasters\Casters\EnumCaster;
+
+class DTO extends DataTransferObject
+{
+    #[CastWith(EnumCaster::class, StatusEnum::class)]
+    public ?StatusEnum $status;
+}
+```
+
 ## Testing
 
 ```bash

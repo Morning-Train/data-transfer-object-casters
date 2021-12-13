@@ -81,7 +81,7 @@ The ModelCaster will attempt to cast the provided value into a Model, using the 
 be fetched by the primary key.
 
 ```php
-use Morningtrain\DataTransferObjectCasters\Casters\DateCaster;
+use Morningtrain\DataTransferObjectCasters\Casters\ModelCaster;
 
 class DTO extends DataTransferObject
 {

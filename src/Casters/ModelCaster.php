@@ -10,9 +10,9 @@ class ModelCaster implements Caster
 {
     public function __construct(
         array $types,
-        public string $class,
-        public ?string $by = null,
-        public ?string $column = null
+        public string $model,
+        public ?string $findBy = null,
+        public ?string $select = null
     ) {
     }
 
@@ -32,18 +32,18 @@ class ModelCaster implements Caster
             return null;
         }
 
-        return $this->column ? $model->{$this->column} : $model;
+        return $this->select ? $model->{$this->select} : $model;
     }
 
     private function getModel(string|int $key): ?Model
     {
-        $modelReflection = new ReflectionClass($this->class);
+        $modelReflection = new ReflectionClass($this->model);
 
         $instance = $modelReflection->newInstanceWithoutConstructor();
 
         return $instance
             ->query()
-            ->where($this->by ?? $instance->getKeyName(), $key)
+            ->where($this->findBy ?? $instance->getKeyName(), $key)
             ->first();
     }
 }

@@ -9,7 +9,7 @@ it('casts to model from primary key', function () {
     $model = TestModel::create(['name' => 'Clark']);
 
     $DTO = new class (['model' => $model->getKey()]) extends DataTransferObject {
-        #[CastWith(ModelCaster::class, class: TestModel::class)]
+        #[CastWith(ModelCaster::class, model: TestModel::class)]
         public TestModel $model;
     };
 
@@ -22,7 +22,7 @@ it('casts to model from specified column', function () {
     $model = TestModel::create(['name' => 'Clark']);
 
     $DTO = new class (['model' => 'Clark']) extends DataTransferObject {
-        #[CastWith(ModelCaster::class, class: TestModel::class, by: 'name')]
+        #[CastWith(ModelCaster::class, model: TestModel::class, findBy: 'name')]
         public TestModel $model;
     };
 
@@ -35,7 +35,7 @@ it('casts to model value from specified column', function () {
     $model = TestModel::create(['name' => 'Clark']);
 
     $DTO = new class (['modelName' => $model->getKey()]) extends DataTransferObject {
-        #[CastWith(ModelCaster::class, class: TestModel::class, column: 'name')]
+        #[CastWith(ModelCaster::class, model: TestModel::class, select: 'name')]
         public string $modelName;
     };
 

@@ -75,6 +75,46 @@ class DTO extends DataTransferObject
 
 If the provided value is not a string, it will return the provided value.
 
+### Model
+
+The ModelCaster will attempt to cast the provided value into a Model, using the given class. By default the model will
+be fetched by the primary key.
+
+```php
+use Morningtrain\DataTransferObjectCasters\Casters\ModelCaster;
+
+class DTO extends DataTransferObject
+{
+    #[CastWith(ModelCaster::class, model: TestModel::class)]
+    public TestModel $model;
+}
+```
+
+To fetch a model by a different column, use the *findBy* option.
+
+```php
+use Morningtrain\DataTransferObjectCasters\Casters\DateCaster;
+
+class DTO extends DataTransferObject
+{
+    #[CastWith(ModelCaster::class, model: TestModel::class, findBy: 'name')]
+    public Model $model;
+}
+```
+
+If you wish to cast to a *model value* instead of the model itself, you can retrieve the value by selecting a specific
+model property using the *select* option
+
+```php
+use Morningtrain\DataTransferObjectCasters\Casters\DateCaster;
+
+class DTO extends DataTransferObject
+{
+    #[CastWith(ModelCaster::class, model: TestModel::class, select: 'name')]
+    public string $modelName;
+}
+```
+
 ## Testing
 
 ```bash

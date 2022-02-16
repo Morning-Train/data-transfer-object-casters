@@ -44,7 +44,8 @@
         "test-coverage": "vendor/bin/pest --coverage-html coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": true
     },
     "minimum-stability": "dev",
     "prefer-stable": true
